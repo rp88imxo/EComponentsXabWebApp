@@ -32,7 +32,6 @@ namespace EComponentsXabWebApp
             builder.Services
                 .AddControllersWithViews();
 
-
             #region CUSTOM_SERVICES
 
             #endregion
