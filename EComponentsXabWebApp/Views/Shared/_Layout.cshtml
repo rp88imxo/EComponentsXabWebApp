@@ -95,7 +95,7 @@
         <header class="theme-main-menu sticky-menu theme-menu-four">
             <div class="inner-content">
                 <div class="d-flex align-items-center">
-                    <div class="logo order-lg-0"><a href="index.html" class="d-block"><img src="~/sinco/images/logo/logo_03.png" alt="" width="90"></a></div>
+                    @*<div class="logo order-lg-0"><a asp-action="Index" asp-controller="Home" class="d-block"><img src="~/sinco/images/logo/logo_03.png" alt="" width="90"></a></div>*@
 
                     <div class="right-widget d-flex align-items-center ms-auto order-lg-3">
                         @*<div class="call-button d-none d-xl-block me-5">Call us <a href="#">(+880) 321 782 110</a></div>*@
@@ -111,7 +111,7 @@
                             <ul class="navbar-nav">
                                 <li class="d-block d-lg-none"><div class="logo"><a asp-action="Index" asp-controller="Home"><img src="~/sinco/images/logo/logo_01.png" alt="" width="130"></a></div></li>
                                 <li class="nav-item active dropdown">
-                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">Главная</a>
+                                    <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false" asp-action="Index" asp-controller="Home">Главная</a>
                                     <ul class="dropdown-menu">
                                         @* <li><a href="index.html" class="dropdown-item"><span>User Analysis</span></a></li>
                                         <li><a href="index-2.html" class="dropdown-item"><span>Artificial Intelligence</span></a></li>
@@ -224,7 +224,7 @@
                     </div> <!-- /.subscribe-area -->
                     <div class="row">
                         <div class="col-lg-4 footer-intro mb-40">
-                            <div class="logo"><a href="index.html"><img src="~/sinco/images/logo/logo_01_our.png" alt="О Нас" width="130"></a></div>
+                            <div class="logo"><a asp-action="Index" asp-controller="Home"><img src="~/sinco/images/logo/logo_01_our.png" alt="О Нас" width="130"></a></div>
                             <p>EComponents — мировой лидер, специализирующийся на поставках электронных компонентов по всему миру через нашу широкую сеть поставщиков по всему миру. Просто отправьте нам номера деталей с нужным вам количеством, и вы получите то, что хотите.</p>
                             @*<ul class="d-flex social-icon style-none">
                             <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
