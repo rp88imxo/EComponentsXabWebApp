@@ -1,9 +1,13 @@
 using EComponents.Core.Domain.Role;
 using EComponents.Core.Domain.User;
 using EComponents.Database;
+using EComponents.Services.Mail;
+using EComponentsXabWebApp.BuilderExtensions;
 using Microsoft.AspNetCore.Cors.Infrastructure;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.DependencyInjection.Extensions;
 
 namespace EComponentsXabWebApp
 {
@@ -32,7 +36,15 @@ namespace EComponentsXabWebApp
             builder.Services
                 .AddControllersWithViews();
 
+            #region CUSTOM_BUILDER_OPTIONS
+
+            builder.AddDefaultMailService();
+
+            #endregion
+
             #region CUSTOM_SERVICES
+
+            builder.Services.AddScoped<IEmailService, DefaultMailService>();
 
             #endregion
 
